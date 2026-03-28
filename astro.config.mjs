@@ -13,8 +13,12 @@ export default defineConfig({
   integrations: [react(), mdx(), markdoc(), keystatic()],
 
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    ssr: {
+      // Externalize keystatic to avoid Vite transform issues
+      external: ['@keystatic/core', '@keystatic/astro'],
+    },
   },
 
-  adapter: vercel()
+  adapter: vercel(),
 });
