@@ -1,0 +1,80 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id.replace(/\.mdx$/, "") },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={`${post.data.title} | BitGuru Blog`} description={post.data.description}>
+  <article class="pt-32 pb-24 px-5 sm:px-8">
+    <div class="max-w-3xl mx-auto">
+      <!-- Back link -->
+      <a href="/blog" class="inline-flex items-center gap-2 text-primary-container font-semibold mb-8 hover:underline underline-offset-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6" /></svg>
+        Back to Blog
+      </a>
+
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2 mb-6">
+        {post.data.tags.map((tag: string) => (
+          <span class="px-3 py-1 rounded-full bg-primary-container/10 text-primary-container text-xs font-semibold uppercase tracking-wider">
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-4xl md:text-5xl font-display font-extrabold leading-tight mb-6">
+        {post.data.title}
+      </h1>
+
+      <!-- Meta -->
+      <div class="flex items-center gap-4 text-on-surface-variant mb-12">
+        <div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container font-bold text-sm">
+          {post.data.author.split(" ").map((w: string) => w[0]).join("")}
+        </div>
+        <div>
+          <div class="font-medium text-on-surface">{post.data.author}</div>
+          <time class="text-sm" datetime={post.data.pubDate.toISOString()}>
+            {post.data.pubDate.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+          </time>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="prose prose-invert prose-lg max-w-none
+        prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight
+        prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
+        prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+        prose-p:text-on-surface-variant prose-p:leading-relaxed
+        prose-a:text-primary-container prose-a:no-underline hover:prose-a:underline
+        prose-strong:text-on-surface
+        prose-li:text-on-surface-variant
+        prose-ul:space-y-2
+        prose-ol:space-y-2
+        prose-blockquote:border-primary-container/30 prose-blockquote:text-on-surface-variant
+        prose-code:text-primary prose-code:bg-surface-container-high prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+      ">
+        <Content />
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 glass-panel rounded-3xl p-10 border border-outline-variant/10 text-center">
+        <h3 class="text-2xl font-display font-bold mb-4">Want to go deeper?</h3>
+        <p class="text-on-surface-variant mb-8 max-w-lg mx-auto">Our courses cover these topics in depth with live examples, community access, and 1:1 support.</p>
+        <a href="/courses" class="gradient-primary text-on-primary-fixed px-8 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-all inline-block">
+          Explore Courses
+        </a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

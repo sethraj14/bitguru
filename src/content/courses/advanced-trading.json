@@ -1,0 +1,18 @@
+{
+  "title": "Advanced Trading Strategies",
+  "slug": "advanced-trading",
+  "description": "Master technical analysis, risk management, and advanced trading strategies used by professional crypto traders.",
+  "longDescription": "Go beyond the basics with institutional-grade trading strategies. Learn chart patterns, on-chain analytics, DeFi yield strategies, and portfolio construction techniques that maximize returns while managing risk.",
+  "price": 499,
+  "originalPrice": 799,
+  "currency": "USD",
+  "duration": "12 weeks",
+  "level": "advanced",
+  "modules": 16,
+  "lessons": 64,
+  "image": "/images/courses/advanced-trading.jpg",
+  "instructor": "BitGuru Team",
+  "tags": ["trading", "technical-analysis", "defi", "risk-management"],
+  "featured": true,
+  "comingSoon": false
+}

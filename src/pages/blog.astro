@@ -1,0 +1,249 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Blog | BitGuru — Crypto Insights & Trading Tips"
+  description="Stay ahead of the market. Deep-dive analysis, technical masterclasses, and real-time trends curated by industry gurus."
+>
+
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-8 mb-24 pt-24">
+    <div class="py-16 md:py-24">
+      <span class="text-primary-fixed-dim font-display font-bold tracking-widest uppercase text-sm mb-4 block">
+        Editorial Insights
+      </span>
+      <h1 class="font-display text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface leading-tight mb-6">
+        Crypto Insights &amp; <br />
+        <span class="gradient-text-primary">Trading Tips</span>
+      </h1>
+      <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+        Stay ahead of the market. Deep-dive analysis, technical masterclasses, and real-time trends curated by industry gurus.
+      </p>
+    </div>
+
+    <!-- Categories -->
+    <div class="flex flex-wrap gap-4 mt-8">
+      <a href="/blog" class="px-6 py-2 rounded-full border border-primary-container bg-primary-container/10 text-primary-container transition-colors text-sm font-semibold">All Topics</a>
+      <a href="/blog" class="px-6 py-2 rounded-full border border-outline-variant hover:bg-surface-container-high transition-colors text-sm font-semibold">Crypto Basics</a>
+      <a href="/blog" class="px-6 py-2 rounded-full border border-outline-variant hover:bg-surface-container-high transition-colors text-sm font-semibold">Technical Analysis</a>
+      <a href="/blog" class="px-6 py-2 rounded-full border border-outline-variant hover:bg-surface-container-high transition-colors text-sm font-semibold">Market Trends</a>
+      <a href="/blog" class="px-6 py-2 rounded-full border border-outline-variant hover:bg-surface-container-high transition-colors text-sm font-semibold">Trading Strategy</a>
+    </div>
+  </section>
+
+  <!-- Featured Article -->
+  <section class="max-w-7xl mx-auto px-8 mb-24">
+    <a href="/blog/understanding-bitcoin-halving" class="relative group cursor-pointer overflow-hidden rounded-[2rem] bg-surface-container-low aspect-[21/9] block">
+      <img
+        alt="Abstract blockchain visualization"
+        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy1Wu0398iqu2zvmzUedA1je8ijzyc5N-msXWjy2i7zJSPO8v8gU_I-beN6-3Qop9VhnorwY9-b_DfzCPyTTjBlSLktXqFbhl3t2nV_v5UkCh7BAjeG2LvafRdsEECAzrCLLZ9Ldd6GeAWpvHmymMUvn-8Fb0oeMQMpFi705HC1pyE3cw1f61Fhw3RjZ0kLhv328LqzKZIYVhcio5qLI5GQN5RWnkTHaNqhRTv-T6iCRgsQp6xqJLI1QsDehrwvJlOnYybICVq0Q"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+      <div class="absolute bottom-0 left-0 p-8 md:p-12 max-w-3xl">
+        <div class="flex items-center gap-4 mb-4">
+          <span class="px-3 py-1 rounded-lg bg-primary-container/20 text-primary-fixed-dim text-xs font-bold uppercase tracking-widest backdrop-blur-md">
+            Featured Story
+          </span>
+          <span class="text-on-surface-variant text-sm flex items-center gap-1">
+            <!-- schedule icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            12 min read
+          </span>
+        </div>
+        <h2 class="font-display text-3xl md:text-5xl font-bold text-on-surface mb-6 leading-tight group-hover:text-primary-fixed transition-colors">
+          The Ethereum Evolution: What the Next Upgrade Means for Yield Farmers
+        </h2>
+        <p class="text-on-surface-variant text-lg mb-8 line-clamp-2">
+          DeFi protocols are bracing for the largest architectural shift since the Merge. We break down the technical implications and capital efficiency strategies for the Q4 cycle.
+        </p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant/30">
+            <img
+              alt="Author"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcAaNeX3DHYZ_-DYzUCrgytL8XmHtNdOnDxdBAOOzh6A9meIgTcXA0RqlgR4qwzA7B_rEPlF_HUQ713NVRnUTFmPQTcLL8U9pccDefKHr6OIxonIG9qBplN_DEj3HAWqPJkw6x3EHb3RejsqeLeubYXA38rvkU4PsRusM7lhrAtU8HoVCO5kljOik7v5nxFRm37omG4akCPxSQiK9Mq85XXDGdKIhS0xK2ufuquHvzGYGpaiad6XFhIOIMZEHQO41y_YYgHnYdqg"
+            />
+          </div>
+          <div>
+            <p class="font-bold text-on-surface">Marcus Sterling</p>
+            <p class="text-xs text-on-surface-variant">Senior Markets Analyst</p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </section>
+
+  <!-- Article Grid -->
+  <section class="max-w-7xl mx-auto px-8 mb-24">
+    <div class="flex justify-between items-end mb-12">
+      <h3 class="font-display text-3xl font-bold">Latest Masterclasses</h3>
+      <a class="text-primary-fixed-dim font-bold flex items-center gap-2 hover:underline underline-offset-4" href="/blog">
+        View Archive
+        <!-- arrow_forward icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+      <!-- Card 1 -->
+      <article class="group">
+        <div class="rounded-2xl overflow-hidden bg-surface-container-low mb-6 aspect-video relative">
+          <img
+            alt="Candlestick chart"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeKyCaQiBekxau9RPVeyVoDWG8WrT3RUnmzGp0Db7I77Efmqqtr2NUglHw_QlflkFKeDPs-mm1UJT9hKZTZiWlOzADHkfTXK_L3vFcS0J6FAgbcYwaAA8CJ375xFqzt9GQ9Nj0dwku1hgxVsJLh-ex9N1jTcDMB7X9HvHA85qvoCqNlDquckMAUPjJSRH26uOe_pJrsib0OYk7BLhDVpJuh1uGseWmVIG4hVxZcnuZNyZpJLJZtqCqn-5oJqY90MVK7eFxXgbPZw"
+          />
+        </div>
+        <div class="flex gap-3 mb-3">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-primary px-2 py-1 bg-primary/10 rounded">Technical Analysis</span>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant flex items-center gap-1">8 Min Read</span>
+        </div>
+        <h4 class="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+          Mastering Fibonacci Retracements in Volatile Ranges
+        </h4>
+        <p class="text-on-surface-variant text-sm line-clamp-3 mb-6 leading-relaxed">
+          A step-by-step guide to identifying institutional liquidity zones using golden ratios during weekend price swings.
+        </p>
+        <a href="/blog/technical-analysis-basics" class="text-on-surface font-bold text-sm flex items-center gap-2 group/btn min-h-[44px] items-center">
+          Read Analysis
+          <!-- trending_flat icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary group-hover/btn:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="15 8 19 12 15 16"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="group">
+        <div class="rounded-2xl overflow-hidden bg-surface-container-low mb-6 aspect-video relative">
+          <img
+            alt="NFT concept"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-rrBnru_IcbvJZTwvTk8TK5kbiLPi2cdIDFLsBPLjXJkdlDGMRV14UeFcdaIQ-nl31yK6s6DbX-_WrFydCSZ75OOC2GLgtrBg-mkl4WF85nhCJ2NWQyykrzte2R1PVIJLSM13mSkwUQPcVhNtAMZU8HAuZTHNJcLCEoL_bHnFuX1mQDpPlkNM26V2V3rembS1E6LU4G-497ErOYW_M5y3xFd0nS3WTB5Af65pm0sa5yjgp2eb2CeEBnwSbNll0XIKvosLULbabg"
+          />
+        </div>
+        <div class="flex gap-3 mb-3">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-secondary-fixed-dim px-2 py-1 bg-secondary-fixed-dim/10 rounded">Market Trends</span>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant flex items-center gap-1">6 Min Read</span>
+        </div>
+        <h4 class="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+          The Resurgence of L2 Gaming: Beyond the Hype
+        </h4>
+        <p class="text-on-surface-variant text-sm line-clamp-3 mb-6 leading-relaxed">
+          Why zk-rollups are becoming the backbone of the next generation of on-chain economies and user retention.
+        </p>
+        <a href="/blog/defi-yield-farming-guide" class="text-on-surface font-bold text-sm flex items-center gap-2 group/btn min-h-[44px] items-center">
+          Read Analysis
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary group-hover/btn:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="15 8 19 12 15 16"/>
+          </svg>
+        </a>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="group">
+        <div class="rounded-2xl overflow-hidden bg-surface-container-low mb-6 aspect-video relative">
+          <img
+            alt="Modern office"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT0lpb4f_d1ZuP9JWVwNXJO0nHBvetDHlfvUfOqW1qIDcRp0z0T48DwOkpHzlYilN0ITdXhsago9hcScWf0aXoJBUIlAPaO4Vp-5N2pjORkAk29aAZ7uhOh8ywhJhnDSqjZmqkIoxqDbF26tXQfBtlmetv2z4LY3tUThfLZ_jJ0DmSsqVhadpwyKgZuU5iNGPi7OkYMF0_rBE9IEgx9TOmSUfWu_bLuc5PcsEtWSF19oWWWeCjrtFc_jr0_9Sc1Tkgo6ehdw2e8A"
+          />
+        </div>
+        <div class="flex gap-3 mb-3">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-primary px-2 py-1 bg-primary/10 rounded">Trading Strategy</span>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant flex items-center gap-1">15 Min Read</span>
+        </div>
+        <h4 class="font-display text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+          Psychology of the Bear: Risk Management for Pros
+        </h4>
+        <p class="text-on-surface-variant text-sm line-clamp-3 mb-6 leading-relaxed">
+          How to maintain technical discipline when the macro sentiment turns bearish. Lessons from decade-long traders.
+        </p>
+        <a href="/blog/risk-management-101" class="text-on-surface font-bold text-sm flex items-center gap-2 group/btn min-h-[44px] items-center">
+          Read Analysis
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary group-hover/btn:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="15 8 19 12 15 16"/>
+          </svg>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="max-w-7xl mx-auto px-8 mb-24">
+    <div class="bg-surface-container-low rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-1/2 h-full gradient-gold opacity-5 blur-[120px] rounded-full translate-x-1/2"></div>
+      <div class="relative z-10 flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <div class="flex items-center gap-2 mb-4">
+            <!-- mail icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-secondary-fixed-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <polyline points="22,4 12,13 2,4"/>
+            </svg>
+            <span class="text-secondary-fixed-dim font-bold uppercase tracking-widest text-sm">Join the Elite</span>
+          </div>
+          <h2 class="font-display text-4xl font-extrabold mb-4 leading-tight">
+            Get weekly trading tips directly to your inbox.
+          </h2>
+          <p class="text-on-surface-variant text-lg">
+            Join 45,000+ traders receiving our exclusive "Guru Dispatch" every Monday morning.
+          </p>
+        </div>
+        <div class="md:w-1/2 w-full">
+          <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4">
+            <input
+              name="email"
+              required
+              class="flex-grow bg-surface-container-lowest border-none rounded-xl px-6 py-4 text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary-container/30 focus:bg-surface-container-high transition-all"
+              placeholder="Enter your email address"
+              type="email"
+            />
+            <button
+              class="gradient-primary text-on-primary font-bold px-8 py-4 rounded-xl hover:opacity-90 transition-opacity whitespace-nowrap"
+              type="submit"
+            >
+              Subscribe Now
+            </button>
+          </form>
+          <p id="newsletter-msg" class="mt-4 text-[10px] text-on-surface-variant/60 text-center sm:text-left">
+            No spam. Only alpha. Unsubscribe anytime.
+          </p>
+          <script>
+            document.getElementById("newsletter-form")?.addEventListener("submit", (e) => {
+              e.preventDefault();
+              const form = e.target as HTMLFormElement;
+              const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+              btn.textContent = "Subscribing...";
+              btn.disabled = true;
+              setTimeout(() => {
+                form.reset();
+                btn.textContent = "Subscribed!";
+                const msg = document.getElementById("newsletter-msg");
+                if (msg) {
+                  msg.textContent = "You're in! Check your inbox for the first Guru Dispatch.";
+                  msg.classList.remove("text-on-surface-variant/60");
+                  msg.classList.add("text-primary-container");
+                }
+                setTimeout(() => { btn.textContent = "Subscribe Now"; btn.disabled = false; }, 3000);
+              }, 1200);
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

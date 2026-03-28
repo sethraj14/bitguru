@@ -1,0 +1,86 @@
+---
+const pathname = Astro.url.pathname;
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Courses", href: "/courses" },
+  { label: "Consultation", href: "/consultation" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+---
+
+<nav class="fixed top-0 w-full z-50 backdrop-blur-2xl backdrop-saturate-150 bg-[#0f1418]/70 shadow-[0_1px_0_0_rgba(0,229,255,0.08),0_20px_50px_-12px_rgba(0,229,255,0.06)]" style="border-bottom: 1px solid rgba(0,229,255,0.07);">
+  <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+    <a href="/" class="text-2xl font-black tracking-tighter text-[#00E5FF] font-display">BitGuru</a>
+    <div class="hidden md:flex items-center gap-8">
+      {navLinks.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            "font-display font-bold tracking-tight text-sm uppercase transition-colors",
+            pathname === item.href
+              ? "text-[#00E5FF] border-b-2 border-[#00E5FF] pb-1"
+              : "text-[#dfe3e9] hover:text-[#c3f5ff]",
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </div>
+    <div class="flex items-center gap-4">
+      <a
+        href="/courses"
+        class="hidden md:inline-flex gradient-primary text-on-primary-fixed px-6 py-2.5 rounded-lg font-bold tracking-tight active:scale-95 transition-all duration-200 hover:opacity-80"
+      >
+        Start Learning
+      </a>
+      <button
+        id="mobile-menu-btn"
+        class="flex h-11 w-11 items-center justify-center rounded-lg text-on-surface-variant transition-colors hover:bg-surface-container-high md:hidden"
+        aria-label="Open menu"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden border-t border-[#3b494c]/15 px-8 pb-6 md:hidden">
+    <div class="flex flex-col gap-1 pt-4">
+      {navLinks.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            "rounded-lg px-4 py-3 font-display font-bold tracking-tight text-sm uppercase transition-colors",
+            pathname === item.href
+              ? "text-[#00E5FF] bg-surface-container-high"
+              : "text-[#dfe3e9] hover:text-[#c3f5ff] hover:bg-surface-container-high",
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+      <a
+        href="/courses"
+        class="mt-4 gradient-primary text-on-primary-fixed px-6 py-3 rounded-lg font-bold tracking-tight text-center"
+      >
+        Start Learning
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  btn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+  });
+</script>

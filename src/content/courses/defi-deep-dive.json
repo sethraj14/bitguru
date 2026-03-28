@@ -1,0 +1,18 @@
+{
+  "title": "DeFi Deep Dive",
+  "slug": "defi-deep-dive",
+  "description": "Explore decentralized finance protocols, yield farming, liquidity provision, and the future of permissionless finance.",
+  "longDescription": "Navigate the DeFi ecosystem with confidence. From AMMs to lending protocols, from yield optimization to governance — this course gives you the tools to participate in the financial revolution.",
+  "price": 349,
+  "originalPrice": 599,
+  "currency": "USD",
+  "duration": "10 weeks",
+  "level": "intermediate",
+  "modules": 14,
+  "lessons": 56,
+  "image": "/images/courses/defi-deep-dive.jpg",
+  "instructor": "BitGuru Team",
+  "tags": ["defi", "yield-farming", "liquidity", "smart-contracts"],
+  "featured": true,
+  "comingSoon": false
+}

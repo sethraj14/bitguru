@@ -1,0 +1,212 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="About BitGuru | Our Story & Mission"
+  description="Learn about BitGuru's mission to make crypto education accessible to everyone, everywhere."
+>
+
+  <!-- Hero Section: Mission Statement -->
+  <section class="relative min-h-[716px] flex flex-col items-center justify-center px-8 overflow-hidden pt-24">
+    <!-- Radial hero glow -->
+    <div class="absolute inset-0 hero-gradient pointer-events-none"></div>
+    <div class="max-w-4xl text-center z-10">
+      <span class="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-widest text-primary-container bg-primary-container/10 rounded-full font-body uppercase">
+        Our North Star
+      </span>
+      <h1 class="font-display text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 leading-[1.1]">
+        Making crypto education <span class="gradient-text-primary">accessible</span> to everyone, everywhere.
+      </h1>
+      <p class="font-body text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+        The financial world is evolving. We're here to ensure no one is left behind in the digital gold rush by providing editorial-grade technical analysis and mentorship.
+      </p>
+    </div>
+    <!-- Decorative Glows -->
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/20 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-secondary-fixed-dim/10 blur-[120px] rounded-full pointer-events-none"></div>
+  </section>
+
+  <!-- Founder Story: Bento Style -->
+  <section class="py-24 px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      <!-- Image Box -->
+      <div class="md:col-span-5 rounded-[2rem] overflow-hidden group relative aspect-[4/5] md:aspect-auto">
+        <img
+          alt="BitGuru Founder"
+          class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfZYxW-7Q1hwxKXvYXGkqzxXlExTmOro-lolObwjPQ9pa46I0cmw2kiQg1UarUmRm7BuPp7-VNV0v1Ofuk5xneA7uCvNSQtWXWA4Bnl-mzn4Arudq3gxeYI_8fnUpgKQQAthU1aJM4uqF64RqLvBshVzy7DSRu-7ftF3bcZ1vhG_WgL4BaNSTG_og9ImIM1WhIJHwgB_dDfeysOlZ_qTFKePUqOM0h5r_6yCdYc0pQDhkogTZ4GXf0o2ZlENJpiLQKlw28lRAXwQ"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent opacity-80"></div>
+        <div class="absolute bottom-8 left-8">
+          <p class="font-display text-2xl font-bold text-white">Alex Sterling</p>
+          <p class="font-body text-primary">Founder &amp; Chief Strategist</p>
+        </div>
+      </div>
+      <!-- Content Box -->
+      <div class="md:col-span-7 flex flex-col justify-center space-y-8 bg-surface-container-low p-12 rounded-[2rem]">
+        <h2 class="font-display text-4xl font-extrabold tracking-tight">
+          Meet the Founder - <span class="gradient-text-primary">From beginner to expert.</span>
+        </h2>
+        <div class="space-y-6 font-body text-lg text-on-surface-variant leading-relaxed">
+          <p>
+            BitGuru didn't start in a boardroom. It started in a cluttered apartment in 2017, watching thousands of dollars vanish in a single market candle. I realized that the gap between institutional success and retail loss wasn't just capital—it was <span class="text-white font-semibold">clarity</span>.
+          </p>
+          <p>
+            After spending five years mastering technical analysis and sentiment mapping, I realized the landscape was filled with noise. I created BitGuru to be the digital curator I wish I had—a sanctuary of logic in a sea of hype.
+          </p>
+        </div>
+        <div class="flex gap-4 pt-4">
+          <div class="flex flex-col">
+            <span class="font-display text-3xl font-black text-white">7+</span>
+            <span class="text-xs font-body text-outline uppercase tracking-widest">Years Experience</span>
+          </div>
+          <div class="w-px h-12 bg-outline-variant/30"></div>
+          <div class="flex flex-col">
+            <span class="font-display text-3xl font-black text-white">50k+</span>
+            <span class="text-xs font-body text-outline uppercase tracking-widest">Students Mentored</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section: Glassmorphism Cards -->
+  <section class="py-24 bg-surface-container-lowest">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-16">
+        <h2 class="font-display text-4xl font-extrabold tracking-tight mb-4">
+          The Pillars of the <span class="gradient-text-gold">Guru Status</span>
+        </h2>
+        <p class="text-on-surface-variant max-w-xl mx-auto">
+          We operate at the intersection of technological advancement and ethical education.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Value 1: Trust -->
+        <div class="bg-surface-container-high p-8 rounded-3xl group hover:bg-surface-bright transition-all duration-500">
+          <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
+            <!-- verified_user icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-2xl font-bold mb-3">Trust</h3>
+          <p class="text-on-surface-variant leading-relaxed">
+            We provide verified data and historical performance metrics. No false promises, only evidence-based learning.
+          </p>
+        </div>
+        <!-- Value 2: Transparency -->
+        <div class="bg-surface-container-high p-8 rounded-3xl group hover:bg-surface-bright transition-all duration-500">
+          <div class="w-14 h-14 rounded-2xl bg-secondary-fixed-dim/10 flex items-center justify-center mb-6 text-secondary-fixed-dim group-hover:scale-110 transition-transform">
+            <!-- visibility (filled) icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-2xl font-bold mb-3">Transparency</h3>
+          <p class="text-on-surface-variant leading-relaxed">
+            Our methodologies are open-source. We show the "Why" behind every trade setup and market prediction.
+          </p>
+        </div>
+        <!-- Value 3: Professionalism -->
+        <div class="bg-surface-container-high p-8 rounded-3xl group hover:bg-surface-bright transition-all duration-500">
+          <div class="w-14 h-14 rounded-2xl bg-tertiary-container/10 flex items-center justify-center mb-6 text-tertiary-container group-hover:scale-110 transition-transform">
+            <!-- workspace_premium icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v3.08C4.45 9.19 6 11.42 6 14c0 2.21-.89 4.21-2.33 5.65C4.4 20.47 5.15 21 6 21h12c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3l1.5 3h3l-2.5 2 1 3L12 13.3 9 15l1-3-2.5-2h3L12 6z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-2xl font-bold mb-3">Professionalism</h3>
+          <p class="text-on-surface-variant leading-relaxed">
+            We treat crypto trading as a high-stakes profession. Our content reflects institutional-grade standards.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Section: Mentors & Numbers -->
+  <section class="py-32 px-8 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-end justify-between gap-8 mb-16">
+        <div class="max-w-2xl">
+          <h2 class="font-display text-5xl font-extrabold tracking-tighter mb-6">
+            Our collective intelligence <span class="text-primary">is our edge.</span>
+          </h2>
+          <p class="text-on-surface-variant text-lg leading-relaxed">
+            BitGuru isn't just a platform; it's an ecosystem of veteran traders, data scientists, and thousands of ambitious learners.
+          </p>
+        </div>
+        <a href="/courses" class="px-8 py-4 bg-surface-container-highest text-primary font-bold rounded-xl hover:bg-surface-bright transition-colors inline-block min-h-[44px] flex items-center">
+          Join the Community
+        </a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="aspect-square rounded-[2rem] overflow-hidden relative group">
+          <img
+            alt="Mentor"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHPesYwHygV_AUKq-C4zjlroqAjYwKQpKZx0GuW17fl2aUxnI7Ohgza2puuZOyP1ZmNJ7_SYjz_u2PuslJNrbHaNvMSX_A5JQ2G6SymCEdnglFCQNtORdhT7IS04ElUilyo_7Kldkatf6kS9yafe3YRGv6REND8oDla176__JZOcoeOEVCbA76dM2FoZacHTGZwm5dd8KYqetOOiQ3vtv3aBFGoNuft0T98edbdwrqVps7H2mxmlW-g1m2Dub1L1VTNxhuOv_gzg"
+          />
+          <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        </div>
+        <div class="aspect-square rounded-[2rem] overflow-hidden relative group translate-y-8">
+          <img
+            alt="Community Member"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEzQvlJwits0qOa__Lh88FmZpfJ3VVHSvQRB9LsJT3yWSug_KYNF1g50jcezl8D65CJUNsIvY26jWOzrW207shKOQbgJMCudplu7PVrPm1SG0KR9O8CaiI4FHjD89O3WW0yiKHk3jiv0hvlUAW0uYfFdUplUIcWyk7AkLa04-QWf23tHJ4rsOlxS4Us5hnrg3kV03w1uOd26ruOmE7u1DkvIAqA6RFebf-VqIrlvMzeGgouWdhKdsGG-m_QeuUqzYFXLBfig2gaA"
+          />
+          <div class="absolute inset-0 bg-secondary-fixed-dim/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        </div>
+        <div class="aspect-square rounded-[2rem] overflow-hidden relative group">
+          <img
+            alt="Mentor"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-9sIfP0Rf4MIe9nA1V-e6kSGcddNqO40rJxnXmf51Bq9JoozwlWPcg6grfVn-XGOJ-wPrZbBtFtCFYiXmQJlxZmMxHi0CbXMPtuVOuSIRxmRIh025Gmbmzg9Kg0GFbnRip-J_QC0RgyU8W7nvUPGgXCYk2wQpdmexSXuMZ3Cu50c-kFwXrkY46kHySGMRDJuTERQAVnEF5TP6LWXMhYpmhO7T-mt8f5vRc35u2sSngqAfloFzBSMPuAcfLFY8qD1A8upKm20FSA"
+          />
+          <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        </div>
+        <div class="aspect-square rounded-[2rem] overflow-hidden relative group translate-y-8">
+          <img
+            alt="Community Member"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5LIke3ab9Y2I-840S3ZIQHODTlvQeq1Hn6I3Os0wU4X90PHD0vEKNac_MOFtzwkjsZvJsKxkPiaeUVZBCbeSn_ftZsZZIydsVv84SDaeq-km2iVOeFhhmg8igizrk_1x9ati6cvL_DoVQ9MaeLYaR-S-1qJ9j2x7bXUnYKK5xwfXjEOtJ4rwBqnKLq4DeEkR2OhZujNfh3QsApCZbdsJRszXM0XfLSSuzkZXYGtijL0dBPOfW1RrnPHvw-sdINIK8B3GwuqqG2A"
+          />
+          <div class="absolute inset-0 bg-secondary-fixed-dim/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 px-8">
+    <div class="max-w-5xl mx-auto bg-gradient-to-br from-surface-container-high to-surface-container-low p-12 md:p-20 rounded-[3rem] text-center relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+      <div class="relative z-10">
+        <h2 class="font-display text-4xl md:text-5xl font-black mb-6 tracking-tight">
+          Ready to begin your <span class="gradient-text-primary">Guru journey?</span>
+        </h2>
+        <p class="text-on-surface-variant text-lg mb-10 max-w-2xl mx-auto">
+          Access our curated syllabus and start making sense of the markets today.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/courses" class="gradient-primary text-on-primary-fixed px-10 py-4 rounded-full font-black text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-transform inline-block text-center min-h-[44px] flex items-center justify-center">
+            Browse All Courses
+          </a>
+          <a href="/courses" class="px-10 py-4 bg-white/5 backdrop-blur-md text-white border border-white/10 font-bold rounded-full text-lg hover:bg-white/10 transition-colors inline-block text-center min-h-[44px] flex items-center justify-center">
+            Talk to a Mentor
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .hero-gradient {
+    background: radial-gradient(circle at 50% 50%, rgba(0, 218, 243, 0.15) 0%, rgba(15, 20, 24, 0) 70%);
+  }
+</style>

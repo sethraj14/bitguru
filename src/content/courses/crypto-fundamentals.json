@@ -1,0 +1,18 @@
+{
+  "title": "Crypto Fundamentals Masterclass",
+  "slug": "crypto-fundamentals",
+  "description": "Build a rock-solid foundation in blockchain technology, cryptocurrency markets, and digital asset management.",
+  "longDescription": "This comprehensive course takes you from zero to confident crypto participant. Learn blockchain mechanics, wallet security, market analysis basics, and develop the mental models that separate successful investors from the crowd.",
+  "price": 199,
+  "originalPrice": 399,
+  "currency": "USD",
+  "duration": "8 weeks",
+  "level": "beginner",
+  "modules": 12,
+  "lessons": 48,
+  "image": "/images/courses/crypto-fundamentals.jpg",
+  "instructor": "BitGuru Team",
+  "tags": ["blockchain", "bitcoin", "ethereum", "wallets", "security"],
+  "featured": true,
+  "comingSoon": false
+}

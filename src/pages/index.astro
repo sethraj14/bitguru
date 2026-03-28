@@ -1,17 +1,397 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="BitGuru | Premium Crypto Education">
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-24 px-8 overflow-hidden min-h-screen flex items-center">
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-primary-container/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/4"></div>
+    <div class="absolute bottom-0 left-0 w-1/3 h-1/2 bg-secondary-fixed-dim/5 blur-[100px] rounded-full translate-y-1/4 -translate-x-1/4"></div>
+    <div class="max-w-7xl mx-auto w-full relative z-10 grid md:grid-cols-2 gap-16 items-center">
+      <div class="space-y-8">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-outline-variant/10">
+          <span class="w-2 h-2 rounded-full bg-secondary-fixed-dim animate-pulse"></span>
+          <span class="text-sm font-semibold tracking-wide text-on-surface-variant uppercase">Join 50,000+ students already learning with us.</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-display font-extrabold tracking-tight leading-[1.1]">
+          Learn Crypto Trading. <br />
+          <span class="gradient-text-primary">Build a Second Income.</span>
+        </h1>
+        <p class="text-xl text-on-surface-variant max-w-lg leading-relaxed">
+          A professional approach to crypto trading in just 1–2 hours per day. Master the markets with institutional-grade insights.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-4">
+          <a href="/courses" class="gradient-primary text-on-primary-fixed px-8 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-all inline-block">
+            Start Learning
+          </a>
+          <a href="/courses" class="px-8 py-4 rounded-xl border-2 border-secondary-fixed-dim text-secondary-fixed-dim font-bold text-lg hover:bg-secondary-fixed-dim/10 transition-all inline-block">
+            View Course
+          </a>
+        </div>
+      </div>
+      <div class="relative group">
+        <div class="absolute inset-0 bg-primary-container/20 blur-3xl rounded-full group-hover:bg-primary-container/30 transition-all duration-700"></div>
+        <div class="relative rounded-3xl overflow-hidden glass-panel border border-outline-variant/20 aspect-video shadow-2xl">
+          <img alt="Crypto Dashboard" class="w-full h-full object-cover mix-blend-overlay opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvnTetW0l3SKTBI_Jf7edPK2Ou4tg4kW38ZgSNRWdhgSSHa6ZoY0jPZgBo9P28VUccl7_G1uZEFzi-CPBP3fJ3qdHLUhzf5PHVpvf7OyyrGNZKZaC6EObwHKW_ONd5oRCRjRoVj8z17RKRgX5y25PoGu-IFIztq0mufZvt8ShByX_U3q-hvxmLNkIA8PQjT1uPasL1iuJ465MYMb7ty66Hu1uv_W67av-RFTLnEqPz2LTFuuk8H60IjmGlxM14gsvhp2hfqSdoqw" />
+          <a href="/courses" class="absolute inset-0 flex items-center justify-center" aria-label="Watch intro video">
+            <div class="w-20 h-20 bg-surface/80 rounded-full flex items-center justify-center backdrop-blur-md hover:scale-110 transition-transform">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-primary-container" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section (Glassmorphism Bento) -->
+  <section class="py-24 px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="glass-panel p-10 rounded-3xl border border-outline-variant/10 hover:border-primary-container/30 transition-colors">
+        <div class="text-4xl font-display font-extrabold gradient-text-primary mb-2">50,000+</div>
+        <div class="text-lg text-on-surface-variant font-medium">Students Trained Globally</div>
+      </div>
+      <div class="glass-panel p-10 rounded-3xl border border-outline-variant/10 hover:border-secondary-fixed-dim/30 transition-colors">
+        <div class="text-4xl font-display font-extrabold gradient-text-gold mb-2">10+ Years</div>
+        <div class="text-lg text-on-surface-variant font-medium">Market Trading Experience</div>
+      </div>
+      <div class="glass-panel p-10 rounded-3xl border border-outline-variant/10 hover:border-primary-container/30 transition-colors">
+        <div class="text-4xl font-display font-extrabold gradient-text-primary mb-2">85%</div>
+        <div class="text-lg text-on-surface-variant font-medium">Student Success Rate</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Testimonials Section -->
+  <section class="py-32 px-8 overflow-hidden bg-surface-container-lowest/30">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 space-y-4">
+        <h2 class="text-4xl md:text-5xl font-display font-extrabold text-on-surface">Don't take our word for it. <span class="gradient-text-primary">Hear it from our students.</span></h2>
+        <p class="text-xl text-on-surface-variant max-w-2xl mx-auto">Real results. Real people. Real experiences. Join 50,000+ students.</p>
+      </div>
+      <div class="flex overflow-x-auto pb-12 gap-8 snap-x snap-mandatory" style="scrollbar-width: thin; scrollbar-color: #00e5ff #171c20;">
+        <!-- Large Featured Video -->
+        <div class="flex-shrink-0 w-full md:w-[60%] snap-center">
+          <div class="group relative rounded-3xl overflow-hidden glass-panel border border-primary-container/20 aspect-video shadow-[0_0_40px_-10px_rgba(0,229,255,0.1)] transition-all duration-500 hover:shadow-[0_0_50px_-5px_rgba(0,229,255,0.3)]">
+            <img alt="Featured Student" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHXbZ0S9zY8W8S1J7Z9jY8W8S1J7Z9jY8W8S1J7Z9jY8W8S1J7Z9jY8W8S1J7Z9jY8W8S1J7Z9jY8W8S1J7Z9jY8W8S1" />
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-8">
+              <div class="flex items-center gap-2 mb-3 text-secondary-fixed-dim">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              </div>
+              <h3 class="text-3xl font-bold mb-1">Marcus T.</h3>
+              <p class="text-primary-container font-medium text-lg">"Started earning side income within 2 months"</p>
+            </div>
+            <a href="/testimonials" class="absolute inset-0 flex items-center justify-center" aria-label="Watch Marcus T. testimonial">
+              <div class="w-24 h-24 bg-primary-container/90 rounded-full flex items-center justify-center backdrop-blur-md group-hover:scale-110 transition-all duration-300 shadow-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-on-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Small Video Cards -->
+        <div class="flex-shrink-0 w-full md:w-[40%] snap-center">
+          <div class="group relative rounded-3xl overflow-hidden glass-panel border border-primary-container/20 aspect-video mb-8 transition-all duration-500 hover:shadow-[0_0_40px_-5px_rgba(0,229,255,0.2)]">
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-6">
+              <div class="flex items-center gap-1 mb-2 text-secondary-fixed-dim">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              </div>
+              <h4 class="text-xl font-bold">Elena R.</h4>
+              <p class="text-primary-container text-sm">Now trading confidently with institutional tools</p>
+            </div>
+            <a href="/testimonials" class="absolute inset-0 flex items-center justify-center" aria-label="Watch student testimonial">
+              <div class="w-16 h-16 bg-primary-container/80 rounded-full flex items-center justify-center backdrop-blur-md group-hover:scale-110 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-on-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+              </div>
+            </a>
+          </div>
+          <div class="group relative rounded-3xl overflow-hidden glass-panel border border-primary-container/20 aspect-video transition-all duration-500 hover:shadow-[0_0_40px_-5px_rgba(0,229,255,0.2)]">
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-6">
+              <div class="flex items-center gap-1 mb-2 text-secondary-fixed-dim">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              </div>
+              <h4 class="text-xl font-bold">David S.</h4>
+              <p class="text-primary-container text-sm">Portfolio up 120% since taking the module 02</p>
+            </div>
+            <a href="/testimonials" class="absolute inset-0 flex items-center justify-center" aria-label="Watch student testimonial">
+              <div class="w-16 h-16 bg-primary-container/80 rounded-full flex items-center justify-center backdrop-blur-md group-hover:scale-110 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-on-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Extra Video Card -->
+        <div class="flex-shrink-0 w-full md:w-[40%] snap-center flex flex-col justify-center">
+          <div class="group relative rounded-3xl overflow-hidden glass-panel border border-primary-container/20 aspect-video transition-all duration-500 hover:shadow-[0_0_40px_-5px_rgba(0,229,255,0.2)]">
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-6">
+              <div class="flex items-center gap-1 mb-2 text-secondary-fixed-dim">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+              </div>
+              <h4 class="text-xl font-bold">Sofia K.</h4>
+              <p class="text-primary-container text-sm">Best risk management training I've ever seen</p>
+            </div>
+            <a href="/testimonials" class="absolute inset-0 flex items-center justify-center" aria-label="Watch student testimonial">
+              <div class="w-16 h-16 bg-primary-container/80 rounded-full flex items-center justify-center backdrop-blur-md group-hover:scale-110 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-on-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16 text-center">
+        <a href="/courses" class="gradient-primary text-on-primary-fixed px-12 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-primary-container/20 inline-block">Start Your Crypto Journey Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="py-32 px-8 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+      <div class="space-y-6">
+        <h2 class="text-4xl font-display font-extrabold leading-tight">About BitGuru - Making crypto education <span class="text-primary-container">simple and accessible.</span></h2>
+        <p class="text-lg text-on-surface-variant leading-relaxed">We believe that financial freedom shouldn't be reserved for the elite. BitGuru was founded to bridge the gap between complex blockchain technology and everyday investors seeking a professional edge. Our curriculum is designed by veteran traders who focus on risk management first.</p>
+        <ul class="space-y-4 pt-4">
+          <li class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary-container flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" /></svg>
+            <span class="text-on-surface font-medium">Structured Learning Path</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary-container flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" /></svg>
+            <span class="text-on-surface font-medium">Live Market Analysis Sessions</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary-container flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" /></svg>
+            <span class="text-on-surface font-medium">Exclusive Trader Community Access</span>
+          </li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-2 gap-6">
+        <div class="rounded-3xl overflow-hidden h-80 shadow-2xl">
+          <img alt="Trading Analysis" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjvDHW_D8ahF5SoPnMhJDCh7BxUnKKJwSrOZgEmTkTOt-P3GP8zEWbEX4q_Tczcg3kqcbMyhzJriW0I-NTZIz9Rf-OZKvSRYa_nzUFxU23a62eALFD12USssMbYnL25yRoladjHQwAGOcP-epha21ShWOU44Nw3aU7QZvm00xAgmfiuMiWCyU7hcM_rhMzpHXZHWZidj-_5ETBCmv7kx7FiWNVYTcx-aK_Fc9XU_z2sMQcZA6n3BIjZ-Jz38gWoBMr6oxhmW42hA" />
+        </div>
+        <div class="rounded-3xl overflow-hidden h-80 mt-12 shadow-2xl">
+          <img alt="Bitcoin Coin" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCxlvcer9GP0TLHrxaw3krpb0StiErfwLcJu8iHbtIaxnn42SpAA__CwPzQghOeDHcfpSs6QA4RoiC1zfbF7aCuU1KkkAg1L4PS68PrU3SutR6QwHrCXO3WB4kVqejnMfVtzVhketuwZxdXqA7-hFW2cTHdUcO6yfdyATorD5suPG1dheVer1lgrDZff_qPUM77aHOIFdwkuU-_izbxAFk5q1AAjOMypRl4ZTnXiCBBv_YyRHdo0y2MK4UFpnS8ockNAxgMhILQA" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Crypto Section -->
+  <section class="py-32 px-8 max-w-7xl mx-auto">
+    <div class="text-center mb-20">
+      <h2 class="text-4xl md:text-5xl font-display font-extrabold mb-6">The Future of Finance</h2>
+      <p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Why now is the most critical time in history to understand digital assets.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-12">
+      <div class="group">
+        <div class="w-16 h-16 rounded-2xl bg-primary-container/10 flex items-center justify-center mb-6 group-hover:bg-primary-container/20 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary-container" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 9.9-1" /></svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Financial Freedom</h3>
+        <p class="text-on-surface-variant leading-relaxed">Break away from traditional banking limitations and take full control of your global wealth.</p>
+      </div>
+      <div class="group">
+        <div class="w-16 h-16 rounded-2xl bg-secondary-fixed-dim/10 flex items-center justify-center mb-6 group-hover:bg-secondary-fixed-dim/20 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-secondary-fixed-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Global Accessibility</h3>
+        <p class="text-on-surface-variant leading-relaxed">Trade 24/7/365 from anywhere in the world with nothing but an internet connection.</p>
+      </div>
+      <div class="group">
+        <div class="w-16 h-16 rounded-2xl bg-primary-container/10 flex items-center justify-center mb-6 group-hover:bg-primary-container/20 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary-container" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" /></svg>
+        </div>
+        <h3 class="text-2xl font-bold mb-4">Asymmetric Growth</h3>
+        <p class="text-on-surface-variant leading-relaxed">Position yourself in the fastest-growing asset class of the 21st century.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Highlights -->
+  <section class="py-32 px-8 bg-surface-container-low/50">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
+        <div>
+          <h2 class="text-4xl font-display font-extrabold mb-4">Inside the Curriculum</h2>
+          <p class="text-on-surface-variant text-lg max-w-xl">From your first trade to institutional strategies—everything you need is right here.</p>
+        </div>
+        <a href="/courses" class="text-primary-container font-bold flex items-center gap-2 hover:underline underline-offset-8">
+          View All Modules <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
+        </a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <a href="/courses" class="bg-surface-container-lowest p-1 rounded-[2rem] shadow-xl overflow-hidden group block">
+          <div class="relative h-64 overflow-hidden rounded-[1.8rem]">
+            <img alt="Trading Basics" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1IFy_gy3YP30Jyrp29rvOvHQuQVGMH8Yq3iEqCn-IlCyYeT-kl_QGQEKNDmWl-utPyXkPmsLgv51ZXT2PCfZIF9B8L6fLSnDL14LLxLIW7CkudynFglnXw71dC6sOj8HyQmMME1sjccNy5SCOD5fEX5BxrNcPJxKUYnJ1ox6O87nsiQqF8rSJtrWjIYZE1VC49hM_J6ya3o-iULhGTgvcPs1wZ9fPIkKx39MAKoaWJ9bBmb5Rlif2ojZg-nrbSNKiCKRFTKFjEg" />
+            <div class="absolute top-4 left-4 px-4 py-1.5 rounded-full bg-surface-dim/80 backdrop-blur-md text-xs font-bold text-primary">MODULE 01</div>
+          </div>
+          <div class="p-8">
+            <h4 class="text-2xl font-bold mb-3">Trading Basics</h4>
+            <p class="text-on-surface-variant mb-6">Understand market cycles, blockchain fundamentals, and exchange mechanics.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-semibold text-primary-container">12 Lessons</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-on-surface-variant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 17 18 12 13 7" /><polyline points="6 17 11 12 6 7" /></svg>
+            </div>
+          </div>
+        </a>
+        <a href="/courses" class="bg-surface-container-lowest p-1 rounded-[2rem] shadow-xl overflow-hidden group block">
+          <div class="relative h-64 overflow-hidden rounded-[1.8rem]">
+            <img alt="Risk Management" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRz6x07ywtSeThksi9Is_RrnQEcKBhKOaMgbb2fjpSDaNg80hll9sCsv3VHxu5wWvV1QzoFYCOheRVt3AoNu5ndz3tJ0C3SV1NcCSGeJH7WmwM-aw6xVF4FWz8aaLN3_0ctBGFY3fEhtyYuUasrP78HQgXmZLdmyUKU1hhB4eOG2caLjgLS9WmNz4UXCr8tK1XXPbxtdLc1WfOjrjBnS_cwsfmUJQFf2wxpaHc7g3m0EdPXMOsmZgDYSa1ev5zkMMHSV7qV2N8Ug" />
+            <div class="absolute top-4 left-4 px-4 py-1.5 rounded-full bg-surface-dim/80 backdrop-blur-md text-xs font-bold text-primary">MODULE 02</div>
+          </div>
+          <div class="p-8">
+            <h4 class="text-2xl font-bold mb-3">Risk Management</h4>
+            <p class="text-on-surface-variant mb-6">The "Guru" secret: How to protect your capital and manage position sizing like a pro.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-semibold text-primary-container">8 Lessons</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-on-surface-variant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 17 18 12 13 7" /><polyline points="6 17 11 12 6 7" /></svg>
+            </div>
+          </div>
+        </a>
+        <a href="/courses" class="bg-surface-container-lowest p-1 rounded-[2rem] shadow-xl overflow-hidden group block">
+          <div class="relative h-64 overflow-hidden rounded-[1.8rem]">
+            <img alt="Advanced Strategies" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtiDhf0AWDAygPsNYwHGTe44xYhfBDVLHBdDiN7QpnmXdTgFId4fNMtJ1RvqMXk3eJ1l5nIuUESFlT1rC29pvot9fZ1f_bu0MPi2OzaUKMDbZtQKRGHJiZXzeqJeIOn0cT0tM9XXwHFiVYa0ByylW4lfCFP_G4R9LmjHMnWB2CHnBPdNQ-O1yckuSUIESr7L96RvS2nISHt5vLR1LtlXhZ7z2DkbsPn3GK5vkM-PXYq2U4yH_b6DmW39wADjpYwV8omcI61jI65g" />
+            <div class="absolute top-4 left-4 px-4 py-1.5 rounded-full bg-surface-dim/80 backdrop-blur-md text-xs font-bold text-primary">MODULE 03</div>
+          </div>
+          <div class="p-8">
+            <h4 class="text-2xl font-bold mb-3">Advanced Strategies</h4>
+            <p class="text-on-surface-variant mb-6">Leveraging order flow, liquidity hunts, and macro trends to find high-probability setups.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-semibold text-primary-container">15 Lessons</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-on-surface-variant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 17 18 12 13 7" /><polyline points="6 17 11 12 6 7" /></svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-32 px-8 max-w-7xl mx-auto overflow-hidden">
+    <h2 class="text-4xl font-display font-extrabold text-center mb-20">Student Success Stories</h2>
+    <div class="flex flex-col md:flex-row gap-8">
+      <div class="flex-1 glass-panel p-10 rounded-3xl border border-outline-variant/10 relative">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-primary/10 absolute top-6 right-8" viewBox="0 0 24 24" fill="currentColor"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" /></svg>
+        <p class="text-xl italic text-on-surface mb-8 relative z-10">"BitGuru changed my entire perspective on trading. I stopped gambling and started treating it like a business. I'm now consistently profitable."</p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container font-bold">JD</div>
+          <div>
+            <div class="font-bold">James D.</div>
+            <div class="text-sm text-on-surface-variant">Full-time Trader</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1 glass-panel p-10 rounded-3xl border border-outline-variant/10 relative">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-primary/10 absolute top-6 right-8" viewBox="0 0 24 24" fill="currentColor"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" /></svg>
+        <p class="text-xl italic text-on-surface mb-8 relative z-10">"The risk management module alone is worth the price of the entire course. It saved me from making rookie mistakes that usually wipe people out."</p>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-secondary-fixed-dim/20 flex items-center justify-center text-secondary-fixed-dim font-bold">SL</div>
+          <div>
+            <div class="font-bold">Sarah L.</div>
+            <div class="text-sm text-on-surface-variant">Passive Income Student</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1:1 Consultation Section -->
+  <section class="py-32 px-8 bg-[#020617] relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,229,255,0.05),transparent_70%)]"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="glass-panel rounded-[3rem] border border-primary-container/20 p-8 md:p-16 shadow-[0_0_50px_-12px_rgba(0,229,255,0.2)]">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="space-y-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 border border-primary-container/20 text-xs font-bold text-primary-container tracking-widest uppercase">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" /></svg>
+              Premium Service
+            </div>
+            <h2 class="text-4xl md:text-5xl font-display font-extrabold leading-tight">Book a 1:1 <br /><span class="gradient-text-primary">Crypto Consultation</span></h2>
+            <p class="text-lg text-on-surface-variant leading-relaxed">Get direct, personalized access to BitGuru experts. In this 60-minute session, we'll strip away the noise and focus entirely on your financial goals.</p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="mt-1 w-6 h-6 rounded-full bg-secondary-fixed-dim/20 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-secondary-fixed-dim" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-on-surface">Direct Access to Master Traders</h4>
+                  <p class="text-sm text-on-surface-variant">Skip the queues and talk to veterans with real skin in the game.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="mt-1 w-6 h-6 rounded-full bg-secondary-fixed-dim/20 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-secondary-fixed-dim" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-on-surface">Personalized Strategy for Your Goals</h4>
+                  <p class="text-sm text-on-surface-variant">No generic advice. We build a blueprint around your capital and risk profile.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="mt-1 w-6 h-6 rounded-full bg-secondary-fixed-dim/20 flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-secondary-fixed-dim" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-on-surface">Absolute Clarity in a Volatile Market</h4>
+                  <p class="text-sm text-on-surface-variant">Cut through the FUD and hype with institutional-grade market sentiment analysis.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-surface-container-highest/30 rounded-[2rem] p-8 md:p-12 border border-outline-variant/20 relative">
+            <div class="absolute -top-4 right-8 px-4 py-1.5 rounded-full bg-secondary-fixed-dim text-on-secondary font-bold text-xs tracking-tight shadow-lg">Limited to 5 slots per week</div>
+            <h3 class="text-2xl font-bold mb-6">Session Highlights:</h3>
+            <ul class="space-y-4 mb-10">
+              <li class="flex items-center gap-3 text-on-surface-variant"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary-container flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12" /></svg>Tailored Crypto Investment Plans</li>
+              <li class="flex items-center gap-3 text-on-surface-variant"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary-container flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12" /></svg>Portfolio &amp; Account Management Review</li>
+              <li class="flex items-center gap-3 text-on-surface-variant"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary-container flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12" /></svg>Professional Trading Guidance</li>
+              <li class="flex items-center gap-3 text-on-surface-variant"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary-container flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12" /></svg>Direct Clarity on Market Doubts</li>
+            </ul>
+            <div class="mb-8">
+              <div class="text-sm text-on-surface-variant font-medium uppercase tracking-widest mb-1">Investment</div>
+              <div class="text-5xl font-display font-extrabold text-on-surface">$299<span class="text-lg text-on-surface-variant font-normal"> / session</span></div>
+            </div>
+            <a href="/consultation" class="block w-full gradient-primary text-on-primary-fixed py-5 rounded-2xl font-bold text-xl hover:scale-[1.02] transition-transform shadow-2xl shadow-primary-container/20 mb-6 text-center">Book a 60-Min Call</a>
+            <div class="flex items-center justify-center gap-2 text-on-surface-variant text-sm font-medium">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary-container" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" /></svg>
+              Trusted by 50,000+ learners
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="py-24 px-8 mb-24">
+    <div class="max-w-5xl mx-auto rounded-[3rem] gradient-primary p-1">
+      <div class="bg-surface-container-lowest rounded-[2.9rem] p-12 md:p-24 text-center overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/10 blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary-fixed-dim/10 blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+        <h2 class="text-4xl md:text-6xl font-display font-extrabold mb-8 relative z-10">Ready to start your journey?</h2>
+        <p class="text-xl text-on-surface-variant mb-12 max-w-2xl mx-auto relative z-10">Secure your spot in our next cohort and start building your financial future today.</p>
+        <a href="/courses" class="gradient-primary text-on-primary-fixed px-12 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-primary-container/20 relative z-10 inline-block">Start Learning</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

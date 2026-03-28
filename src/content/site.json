@@ -1,0 +1,33 @@
+{
+  "name": "BitGuru",
+  "tagline": "Master Crypto. Build Wealth. Join the Elite.",
+  "description": "Expert-led crypto education for ambitious learners. From fundamentals to advanced trading strategies.",
+  "contact": {
+    "email": "hello@bitguru.com",
+    "phone": "+1 (555) 123-4567",
+    "address": "123 Blockchain Street, San Francisco, CA 94102"
+  },
+  "social": {
+    "twitter": "https://twitter.com/bitguru",
+    "youtube": "https://youtube.com/@bitguru",
+    "telegram": "https://t.me/bitguru",
+    "discord": "https://discord.gg/bitguru",
+    "instagram": "https://instagram.com/bitguru"
+  },
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "Courses", "href": "/courses" },
+    { "label": "About", "href": "/about" },
+    { "label": "Blog", "href": "/blog" },
+    { "label": "Testimonials", "href": "/testimonials" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "cta": {
+    "primary": { "label": "Explore Courses", "href": "/courses" },
+    "secondary": { "label": "Book a Call", "href": "/consultation" }
+  },
+  "features": {
+    "checkout": false,
+    "booking": false
+  }
+}

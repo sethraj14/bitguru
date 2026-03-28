@@ -1,0 +1,239 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Book 1:1 Consultation | BitGuru"
+  description="Book a 1:1 strategy session with Alex Rivera, Chief Investment Strategist. Get a personalized crypto portfolio audit and 90-day action plan."
+>
+
+  <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+
+    <!-- Hero Header -->
+    <header class="mb-16 text-center md:text-left">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high mb-6 border border-outline-variant/10">
+        <span class="w-2 h-2 rounded-full bg-primary-fixed-dim shadow-[0_0_8px_#00daf3]"></span>
+        <span class="text-xs font-bold uppercase tracking-widest text-primary-fixed-dim">Expert Access</span>
+      </div>
+      <h1 class="font-display text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">
+        1:1 Crypto Consultation
+      </h1>
+      <p class="text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+        Unlock expert insights tailored to your portfolio. Deep dive into market cycles, risk management, and advanced trading strategies.
+      </p>
+    </header>
+
+    <!-- Booking Section: Bento-style layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+      <!-- Left Column: Expert Profile & Info (4 Cols) -->
+      <div class="lg:col-span-4 space-y-8">
+        <div class="glass-panel rounded-xl p-8 border border-outline-variant/10 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+          <div class="flex items-center gap-4 mb-8">
+            <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary-container flex-shrink-0">
+              <img
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvsBuqeQKjpmikWvyaZ9fH0RsfpQvbFO89kSHkK4exH4-M6EqD8KyZn6OJIF4ZCsDZWejwOWe78N2b2LlWoI-daJYPeelOrMZfzJa9JjLAF4qsaMqL7x8S9jvxxKSC5W31GGXJNkZeVsS8Io_UmxFVEwC3TYEe1OAyt2fKzfhUseV9n1KTDpy_15XtXkcW0jbGVTkxjRjvFl8AHSLEjUaIQezgIq96RYPV4rOYm06qSm4UMVKZHMAGCnN9Z6e97UF7R__41OyPbg"
+                alt="Close up portrait of a crypto consultant"
+              />
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-xl text-on-surface">Alex Rivera</h3>
+              <p class="text-sm text-primary-fixed-dim">Chief Investment Strategist</p>
+            </div>
+          </div>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3 text-on-surface-variant">
+              <!-- schedule icon (filled) -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary-fixed-dim flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
+              </svg>
+              <span class="text-sm font-medium">60 Minute Strategy Session</span>
+            </li>
+            <li class="flex items-center gap-3 text-on-surface-variant">
+              <!-- video_camera_front icon (filled) -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary-fixed-dim flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 10.48V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-4.48l4 3.98v-11l-4 3.98zm-2-.79V18H4V6h12v3.69z"/>
+                <circle cx="9" cy="12" r="2.5"/>
+                <path d="M9 14.5c-2.33 0-7 1.17-7 3.5V20h14v-2c0-2.33-4.67-3.5-7-3.5z"/>
+              </svg>
+              <span class="text-sm font-medium">Video call (Link provided via email)</span>
+            </li>
+            <li class="flex items-center gap-3 text-on-surface-variant">
+              <!-- language icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary-fixed-dim flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
+              </svg>
+              <span class="text-sm font-medium">All times are in your local timezone</span>
+            </li>
+          </ul>
+          <div class="mt-8 pt-8 border-t border-outline-variant/10">
+            <h4 class="font-display font-bold mb-3 text-sm uppercase tracking-wider text-on-surface/60">What to expect</h4>
+            <p class="text-sm text-on-surface-variant leading-relaxed">
+              Personalized audit of your current assets, macro market analysis, and a structured action plan for the next 90 days.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Booking System (8 Cols) -->
+      <div class="lg:col-span-8 glass-panel rounded-xl border border-outline-variant/10 overflow-hidden shadow-2xl">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+
+          <!-- Calendar Side -->
+          <div class="p-8 border-r border-outline-variant/10 bg-surface-container-low">
+            <div class="flex justify-between items-center mb-8">
+              <h2 class="font-display font-bold text-xl">Select Date</h2>
+              <div class="flex gap-2">
+                <button
+                  class="p-2 hover:bg-surface-container-high rounded-full text-on-surface transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+                  aria-label="Previous month"
+                >
+                  <!-- chevron_left -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                  </svg>
+                </button>
+                <button
+                  class="p-2 hover:bg-surface-container-high rounded-full text-on-surface transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+                  aria-label="Next month"
+                >
+                  <!-- chevron_right -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="text-center mb-4">
+              <span class="font-bold text-on-surface">November 2024</span>
+            </div>
+            <div class="grid grid-cols-7 text-center gap-1">
+              <!-- Weekdays -->
+              <div class="text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold py-2">Mon</div>
+              <div class="text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold py-2">Tue</div>
+              <div class="text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold py-2">Wed</div>
+              <div class="text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold py-2">Thu</div>
+              <div class="text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold py-2">Fri</div>
+              <div class="text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold py-2">Sat</div>
+              <div class="text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold py-2">Sun</div>
+              <!-- Dummy offset dates (prev month) -->
+              <div class="py-3 text-xs text-on-surface/20">28</div>
+              <div class="py-3 text-xs text-on-surface/20">29</div>
+              <div class="py-3 text-xs text-on-surface/20">30</div>
+              <div class="py-3 text-xs text-on-surface/20">31</div>
+              <!-- Nov dates -->
+              <button class="py-3 text-sm font-semibold hover:bg-primary/10 rounded-lg transition-colors min-h-[44px]">1</button>
+              <button class="py-3 text-sm font-semibold text-on-surface/30 cursor-not-allowed min-h-[44px]" disabled>2</button>
+              <button class="py-3 text-sm font-semibold text-on-surface/30 cursor-not-allowed min-h-[44px]" disabled>3</button>
+              <button class="py-3 text-sm font-semibold hover:bg-primary/10 rounded-lg transition-colors min-h-[44px]">4</button>
+              <button class="py-3 text-sm font-semibold hover:bg-primary/10 rounded-lg transition-colors min-h-[44px]">5</button>
+              <button class="py-3 text-sm font-semibold hover:bg-primary/10 rounded-lg transition-colors min-h-[44px]">6</button>
+              <button class="py-3 text-sm font-semibold hover:bg-primary/10 rounded-lg transition-colors min-h-[44px]">7</button>
+              <button class="py-3 text-sm font-semibold bg-primary-container text-on-primary-container rounded-lg shadow-[0_0_15px_rgba(0,229,255,0.4)] min-h-[44px]">8</button>
+              <button class="py-3 text-sm font-semibold text-on-surface/30 cursor-not-allowed min-h-[44px]" disabled>9</button>
+              <button class="py-3 text-sm font-semibold text-on-surface/30 cursor-not-allowed min-h-[44px]" disabled>10</button>
+              <button class="py-3 text-sm font-semibold hover:bg-primary/10 rounded-lg transition-colors min-h-[44px]">11</button>
+              <button class="py-3 text-sm font-semibold hover:bg-primary/10 rounded-lg transition-colors min-h-[44px]">12</button>
+              <button class="py-3 text-sm font-semibold hover:bg-primary/10 rounded-lg transition-colors min-h-[44px]">13</button>
+              <button class="py-3 text-sm font-semibold hover:bg-primary/10 rounded-lg transition-colors min-h-[44px]">14</button>
+              <button class="py-3 text-sm font-semibold hover:bg-primary/10 rounded-lg transition-colors min-h-[44px]">15</button>
+              <button class="py-3 text-sm font-semibold text-on-surface/30 cursor-not-allowed min-h-[44px]" disabled>16</button>
+              <button class="py-3 text-sm font-semibold text-on-surface/30 cursor-not-allowed min-h-[44px]" disabled>17</button>
+            </div>
+            <div class="mt-8 flex items-center justify-center gap-2 text-xs text-on-surface-variant bg-surface-container p-3 rounded-xl border border-outline-variant/5">
+              <!-- public icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
+              </svg>
+              All times are in Central European Time (CET)
+            </div>
+          </div>
+
+          <!-- Form & Slots Side -->
+          <div class="p-8 flex flex-col h-full bg-surface-container-lowest">
+            <div class="flex items-center justify-between mb-8">
+              <h2 class="font-display font-bold text-xl">Details</h2>
+              <span class="text-xs font-bold text-primary-fixed-dim">Step 2 of 2</span>
+            </div>
+            <div class="space-y-6">
+              <!-- Time Selection -->
+              <div class="mb-4">
+                <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3 block">Available Slots (Nov 8)</label>
+                <div class="grid grid-cols-2 gap-3 max-h-48 overflow-y-auto pr-2">
+                  <button class="py-3 px-4 rounded-xl bg-surface-container-high border border-outline-variant/10 text-sm font-semibold hover:border-primary-container transition-all text-center min-h-[44px]">09:00 AM</button>
+                  <button class="py-3 px-4 rounded-xl bg-primary-container text-on-primary-container border border-primary-container text-sm font-semibold transition-all text-center min-h-[44px]">10:30 AM</button>
+                  <button class="py-3 px-4 rounded-xl bg-surface-container-high border border-outline-variant/10 text-sm font-semibold hover:border-primary-container transition-all text-center min-h-[44px]">01:00 PM</button>
+                  <button class="py-3 px-4 rounded-xl bg-surface-container-high border border-outline-variant/10 text-sm font-semibold hover:border-primary-container transition-all text-center min-h-[44px]">03:30 PM</button>
+                </div>
+              </div>
+              <!-- Input Form -->
+              <div class="space-y-4">
+                <div>
+                  <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-1.5 block" for="name">Full Name</label>
+                  <input
+                    class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 text-sm text-on-surface focus:ring-2 focus:ring-primary-container/20 transition-all placeholder:text-on-surface/20"
+                    id="name"
+                    placeholder="Satoshi Nakamoto"
+                    type="text"
+                  />
+                </div>
+                <div>
+                  <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-1.5 block" for="email">Email Address</label>
+                  <input
+                    class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 text-sm text-on-surface focus:ring-2 focus:ring-primary-container/20 transition-all placeholder:text-on-surface/20"
+                    id="email"
+                    placeholder="satoshi@bitcoin.org"
+                    type="email"
+                  />
+                </div>
+                <div>
+                  <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-1.5 block" for="message">What would you like to discuss?</label>
+                  <textarea
+                    class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 text-sm text-on-surface focus:ring-2 focus:ring-primary-container/20 transition-all placeholder:text-on-surface/20 resize-none"
+                    id="message"
+                    placeholder="I want to optimize my cold storage strategy..."
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+              <button
+                id="confirm-booking-btn"
+                type="button"
+                class="w-full py-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed font-display font-extrabold text-base tracking-tight shadow-xl shadow-primary/10 hover:scale-[1.02] active:scale-95 transition-all min-h-[44px]"
+              >
+                Confirm Booking
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust Indicators -->
+    <div class="mt-24 text-center">
+      <p class="text-on-surface-variant text-sm font-bold uppercase tracking-[0.3em] mb-12">As Seen On &amp; Trusted By</p>
+      <div class="flex flex-wrap justify-center gap-12 md:gap-24 opacity-40 grayscale contrast-125">
+        <span class="text-2xl font-black font-display tracking-tighter">CoinDesk</span>
+        <span class="text-2xl font-black font-display tracking-tighter">Binance</span>
+        <span class="text-2xl font-black font-display tracking-tighter">Messari</span>
+        <span class="text-2xl font-black font-display tracking-tighter">The Block</span>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    document.getElementById("confirm-booking-btn")?.addEventListener("click", () => {
+      const btn = document.getElementById("confirm-booking-btn") as HTMLButtonElement;
+      btn.textContent = "Confirming...";
+      btn.disabled = true;
+      setTimeout(() => {
+        window.location.href = "/booking-confirmed";
+      }, 1500);
+    });
+  </script>
+
+</BaseLayout>

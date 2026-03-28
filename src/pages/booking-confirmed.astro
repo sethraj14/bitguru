@@ -1,0 +1,195 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Booking Confirmed | BitGuru"
+  description="Your 1:1 crypto consultation with BitGuru has been booked. Check your email for confirmation details."
+>
+
+  <main class="min-h-screen pt-32 pb-24 px-6 flex flex-col items-center justify-center relative overflow-hidden">
+
+    <!-- Atmospheric Background Elements -->
+    <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-secondary-fixed-dim/5 blur-[100px] rounded-full"></div>
+
+    <div class="max-w-4xl w-full z-10">
+
+      <!-- Success Header -->
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-surface-container-high border-2 border-primary-container/30 mb-8" style="box-shadow: 0 0 40px 8px rgba(0, 229, 255, 0.15);">
+          <!-- check_circle filled -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-primary-container" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5l-4-4 1.41-1.41L10 13.67l6.59-6.59L18 8.5l-8 8z"/>
+          </svg>
+        </div>
+        <h1 class="font-display text-5xl md:text-6xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent">
+          Your 1:1 Consultation is Booked!
+        </h1>
+        <p class="text-on-surface-variant text-xl max-w-2xl mx-auto">
+          Check your email for the confirmation details. We've sent everything you need to prepare for your session with our senior analyst.
+        </p>
+      </div>
+
+      <!-- Bento Grid Confirmation Details -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+        <!-- Main Booking Details Card -->
+        <div class="md:col-span-8 bg-surface-container-low rounded-xl p-8 border-none relative overflow-hidden">
+          <div class="absolute top-0 right-0 p-4">
+            <!-- event_available filled -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="text-primary/20 w-24 h-24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/>
+            </svg>
+          </div>
+          <h2 class="font-display text-2xl font-bold mb-8 flex items-center gap-3">
+            <!-- calendar_today -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary-container flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/>
+            </svg>
+            Session Information
+          </h2>
+          <div class="space-y-6">
+            <div class="grid grid-cols-2 gap-8">
+              <div>
+                <p class="text-sm font-body text-outline uppercase tracking-widest mb-1">Consultant</p>
+                <p class="text-xl font-semibold text-secondary">Alex Rivera</p>
+              </div>
+              <div>
+                <p class="text-sm font-body text-outline uppercase tracking-widest mb-1">Duration</p>
+                <p class="text-xl font-semibold">60 Minutes</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+              <div>
+                <p class="text-sm font-body text-outline uppercase tracking-widest mb-1">Date</p>
+                <p class="text-xl font-semibold">October 24, 2024</p>
+              </div>
+              <div>
+                <p class="text-sm font-body text-outline uppercase tracking-widest mb-1">Time</p>
+                <p class="text-xl font-semibold">14:00 (GMT+2)</p>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-outline-variant/15">
+              <p class="text-sm font-body text-outline uppercase tracking-widest mb-3">Meeting Link</p>
+              <div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-lg">
+                <!-- video_call -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary-container flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                </svg>
+                <code class="text-primary-fixed-dim text-sm overflow-hidden text-ellipsis">meet.google.com/bit-guru-session-qr8p</code>
+                <button id="copy-link-btn" type="button" class="ml-auto text-primary-container hover:bg-primary-container/10 p-2 rounded-lg transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Copy meeting link">
+                  <!-- content_copy -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Small Card -->
+        <div class="md:col-span-4 bg-surface-container-high rounded-xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-secondary-fixed-dim">
+              <img
+                alt="Consultant Profile Picture"
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzXt3SxvsQlAcPOO-TSPUic-6Cx7T46u9K7MvlP6FM8Fr8bkFQBap9damHgtsNCKi2DL56IYZnd9sciZCusJ_tRhaOyG8npPcXngsMWApN2zeUSjFvVwPXNegeDY_IaErGHq6UZvnwWtKnsu3lh_q7rxIkrVE2MTu7DdDq16q8W25ecyaljbgCsDItOxKXUPqakIXDQ9go4jZF5LMtMXhM-AD6Jo-r3DQS3bWMo92Bn-2s4lcKQIZ0kuJetZbuphrXHjoCHv753Q"
+                width="64"
+                height="64"
+              />
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">Alex Rivera</h3>
+            <p class="text-on-surface-variant text-sm">Senior Crypto Strategist &amp; Technical Analyst at BitGuru.</p>
+          </div>
+          <div class="mt-8">
+            <div class="flex items-center gap-2 text-secondary-fixed text-sm mb-4">
+              <!-- stars filled -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/>
+              </svg>
+              Expert Tier
+            </div>
+            <p class="text-xs text-outline italic">"Let's refine your portfolio strategy for the next cycle."</p>
+          </div>
+        </div>
+
+        <!-- What's Next Section (Wide) -->
+        <div class="md:col-span-12 bg-surface-container-low/50 rounded-xl p-8 border-none">
+          <h2 class="font-display text-2xl font-bold mb-8">What's Next?</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <!-- mark_email_unread -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold mb-1 text-on-surface">Confirm Email</p>
+                <p class="text-sm text-on-surface-variant leading-relaxed">Check your inbox for a calendar invite and session itinerary.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <!-- psychology -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13 8.57c-.79 0-1.43.64-1.43 1.43s.64 1.43 1.43 1.43 1.43-.64 1.43-1.43-.64-1.43-1.43-1.43zM13 3C9.25 3 6.2 5.94 6.02 9.64L4.1 12.2c-.25.33-.01.8.4.8H6v3c0 1.1.9 2 2 2h1v3h7v-4.68c1.79-.95 3-2.82 3-4.87C19 6.13 16.31 3 13 3zm-1 13H10v-2H8v-3H6.21l1.4-1.86C7.85 7.23 10.17 5 13 5c2.76 0 5 2.24 5 5 0 2.07-1.23 3.86-3 4.65V16h-3z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold mb-1 text-on-surface">Prepare Questions</p>
+                <p class="text-sm text-on-surface-variant leading-relaxed">Write down your top 3 trading challenges to maximize our time.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <!-- download -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold mb-1 text-on-surface">Download Guide</p>
+                <p class="text-sm text-on-surface-variant leading-relaxed">Get our "Session Readiness PDF" to setup your charts before we meet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Action -->
+      <div class="mt-16 text-center">
+        <a
+          href="/"
+          class="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary-fixed font-bold text-lg rounded-xl transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary-container/20 min-h-[44px]"
+        >
+          Back to Home
+          <!-- arrow_forward -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+          </svg>
+        </a>
+        <p class="mt-8 text-outline text-sm">Need to reschedule? You can do so via the link in your email up to 24 hours before the session.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("copy-link-btn")?.addEventListener("click", () => {
+      const link = "meet.google.com/bit-guru-session-qr8p";
+      navigator.clipboard.writeText(link).then(() => {
+        const btn = document.getElementById("copy-link-btn") as HTMLButtonElement;
+        btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>`;
+        setTimeout(() => {
+          btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>`;
+        }, 2000);
+      });
+    });
+  </script>
+
+</BaseLayout>

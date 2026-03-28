@@ -1,0 +1,196 @@
+---
+// Lead magnet popup — shows after 5 seconds or on exit intent
+// Collects email in exchange for free trading PDF
+---
+
+<!-- Popup Overlay -->
+<div id="lead-popup-overlay" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+  <div id="lead-popup" class="relative w-full max-w-lg glass-panel rounded-[2rem] border border-primary-container/20 shadow-[0_0_60px_-12px_rgba(0,229,255,0.25)]">
+
+    <!-- Glow effects (pointer-events-none so they don't block clicks) -->
+    <div class="absolute top-0 right-0 w-48 h-48 bg-primary-container/10 blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-48 h-48 bg-secondary-fixed-dim/10 blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+
+    <!-- Close button -->
+    <button
+      id="lead-popup-close"
+      type="button"
+      class="absolute top-4 right-4 w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-bright transition-colors z-20 cursor-pointer"
+      aria-label="Close popup"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+    </button>
+
+    <div class="relative z-10 p-8 md:p-10 overflow-hidden rounded-[2rem]">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-fixed-dim/10 border border-secondary-fixed-dim/20 mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-secondary-fixed-dim" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zm-3 4h6v2H10v-2zm0 4h6v2H10v-2zm-2-4h1v2H8v-2zm0 4h1v2H8v-2z"/></svg>
+        <span class="text-xs font-bold text-secondary-fixed-dim uppercase tracking-widest">Free Download</span>
+      </div>
+
+      <!-- Heading -->
+      <h2 class="text-2xl md:text-3xl font-display font-extrabold leading-tight mb-3">
+        The Ultimate <span class="gradient-text-primary">Crypto Trading</span> Cheat Sheet
+      </h2>
+
+      <!-- Description -->
+      <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+        47 pages of institutional-grade strategies, risk frameworks, and market analysis techniques — distilled from 10+ years of real trading. No fluff.
+      </p>
+
+      <!-- What's inside -->
+      <ul class="space-y-2.5 mb-8">
+        <li class="flex items-center gap-2.5 text-sm text-on-surface-variant">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary-container flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+          <span>5 battle-tested entry & exit strategies</span>
+        </li>
+        <li class="flex items-center gap-2.5 text-sm text-on-surface-variant">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary-container flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+          <span>Position sizing calculator & risk templates</span>
+        </li>
+        <li class="flex items-center gap-2.5 text-sm text-on-surface-variant">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary-container flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+          <span>Market cycle cheat sheet with historical data</span>
+        </li>
+      </ul>
+
+      <!-- Email form -->
+      <form id="lead-form" class="space-y-3">
+        <input
+          id="lead-email"
+          name="email"
+          type="email"
+          required
+          placeholder="Enter your email to download"
+          class="w-full bg-surface-container-lowest border-none rounded-xl px-5 py-4 text-on-surface placeholder:text-outline/50 focus:ring-2 focus:ring-primary-container/30 focus:bg-surface-container-high transition-all"
+        />
+        <button
+          type="submit"
+          class="w-full gradient-primary text-on-primary-fixed py-4 rounded-xl font-display font-bold text-lg hover:opacity-90 active:scale-[0.98] transition-all shadow-lg shadow-primary-container/20"
+        >
+          Download Free PDF
+        </button>
+      </form>
+
+      <p class="text-[10px] text-on-surface-variant/50 text-center mt-4">
+        No spam. Unsubscribe anytime. By downloading you agree to our <a href="/privacy" class="underline hover:text-primary-container">Privacy Policy</a>.
+      </p>
+
+      <!-- Success state (hidden by default) -->
+      <div id="lead-success" class="hidden text-center py-4">
+        <div class="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mx-auto mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-primary-container" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+        </div>
+        <h3 class="text-xl font-display font-bold mb-2">Your PDF is Ready!</h3>
+        <p class="text-on-surface-variant text-sm mb-6">Click below to download your free trading cheat sheet.</p>
+        <a
+          id="lead-download-link"
+          href="/downloads/crypto-trading-cheatsheet.pdf"
+          download
+          class="inline-flex items-center gap-2 gradient-primary text-on-primary-fixed px-8 py-3 rounded-xl font-bold hover:opacity-90 transition-all"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          Download PDF
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const overlay = document.getElementById("lead-popup-overlay");
+  const popup = document.getElementById("lead-popup");
+  const closeBtn = document.getElementById("lead-popup-close");
+  const form = document.getElementById("lead-form") as HTMLFormElement | null;
+  const successDiv = document.getElementById("lead-success");
+
+  const STORAGE_KEY = "bitguru_lead_dismissed";
+  let hasShown = false;
+
+  function showPopup() {
+    if (hasShown) return;
+    if (localStorage.getItem(STORAGE_KEY)) return;
+    hasShown = true;
+    overlay?.classList.remove("hidden");
+    overlay?.classList.add("flex");
+    popup?.classList.add("animate-popup-in");
+  }
+
+  function hidePopup() {
+    overlay?.classList.add("hidden");
+    overlay?.classList.remove("flex");
+    localStorage.setItem(STORAGE_KEY, Date.now().toString());
+  }
+
+  // Trigger 1: Scroll depth — show when user scrolls past 55% of page
+  function onScroll() {
+    const scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100;
+    if (scrollPercent > 55) {
+      showPopup();
+      window.removeEventListener("scroll", onScroll);
+    }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  // Trigger 2: Exit intent — mouse leaves toward browser top (desktop only)
+  document.addEventListener("mouseout", (e) => {
+    if (e.clientY <= 0) showPopup();
+  });
+
+  // Trigger 3: Time fallback — 45 seconds (for mobile users who don't trigger exit intent)
+  setTimeout(showPopup, 45000);
+
+  // Close button
+  closeBtn?.addEventListener("click", hidePopup);
+
+  // Click outside
+  overlay?.addEventListener("click", (e) => {
+    if (e.target === overlay) hidePopup();
+  });
+
+  // Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") hidePopup();
+  });
+
+  // Form submit — collects email, then shows download button
+  // TO WIRE UP: Replace the setTimeout mock with a real API call to your email service
+  // Example: fetch("/api/subscribe", { method: "POST", body: JSON.stringify({ email }) })
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    const emailInput = document.getElementById("lead-email") as HTMLInputElement;
+    btn.textContent = "Processing...";
+    btn.disabled = true;
+
+    // Mock delay — replace with real email service (Mailchimp, Resend, ConvertKit)
+    setTimeout(() => {
+      form.classList.add("hidden");
+      document.querySelector('#lead-popup .text-\\[10px\\]')?.classList.add("hidden");
+      successDiv?.classList.remove("hidden");
+      localStorage.setItem(STORAGE_KEY, Date.now().toString());
+      // Don't auto-close — let user click the download button
+    }, 1200);
+  });
+
+  // Close popup after download link is clicked
+  document.getElementById("lead-download-link")?.addEventListener("click", () => {
+    setTimeout(hidePopup, 500);
+  });
+</script>
+
+<style>
+  @keyframes popup-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95) translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  .animate-popup-in {
+    animation: popup-in 0.3s ease-out;
+  }
+</style>
