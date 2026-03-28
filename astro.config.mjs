@@ -14,10 +14,6 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
-    ssr: {
-      // Externalize keystatic to avoid Vite transform issues
-      external: ['@keystatic/core', '@keystatic/astro'],
-    },
   },
 
   adapter: vercel(),
